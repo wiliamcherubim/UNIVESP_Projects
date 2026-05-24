@@ -1,0 +1,35 @@
+while True:
+    print("\n--- CÁLCULO DA MÉDIA FINAL ---")
+    
+    # Entrada das 4 notas da N1
+    n1_p1 = float(input("Digite a nota 1 da N1: "))
+    n1_p2 = float(input("Digite a nota 2 da N1: "))
+    n1_p3 = float(input("Digite a nota 3 da N1: "))
+    n1_p4 = float(input("Digite a nota 4 da N1: "))
+    
+    # Média aritmética das 4 notas da N1
+    media_n1 = (n1_p1 + n1_p2 + n1_p3 + n1_p4) / 4
+    
+    # Entrada de 1 nota para N2 e 1 nota para N3
+    n2 = float(input("Digite a nota única da N2: "))
+    n3 = float(input("Digite a nota única da N3: "))
+    
+    # Cálculo final aplicando os pesos (50%, 20% e 30%)
+    media_final = (media_n1 * 0.5) + (n2 * 0.2) + (n3 * 0.3)
+    
+    # Exibe os resultados
+    print("\n--- Resultados ---")
+    print(f"Média calculada da N1: {media_n1:.2f}")
+    print(f"Média Final: {media_final:.2f}")
+    
+    # Verificação do status (maior/igual a 6 aprovado, menor reprovado)
+    if media_final >= 6.0:
+        print("Status: Aprovado")
+    else:
+        print("Status: Reprovado")
+        
+    # Opção de resetar o programa
+    continuar = input("\nDeseja calcular a média de outro aluno? (s/n): ").strip().lower()
+    if continuar != 's':
+        print("Programa encerrado!")
+        break
